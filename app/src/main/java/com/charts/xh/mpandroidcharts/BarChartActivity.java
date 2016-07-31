@@ -8,11 +8,11 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.WindowManager;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
+import com.charts.xh.mpandroidcharts.com.charts.xh.utils.CustomerPercentFormatter;
 import com.charts.xh.mpandroidcharts.com.charts.xh.utils.MyYValueFormatter;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Legend;
@@ -27,7 +27,6 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.formatter.YAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
@@ -170,7 +169,7 @@ public class BarChartActivity extends FragmentActivity implements OnSeekBarChang
 
         BarData data = new BarData(xVals, dataSets);
         //data.setGroupSpace(100);
-        data.setValueFormatter(new PercentFormatter());
+        data.setValueFormatter(new CustomerPercentFormatter(data));
         data.setValueTextSize(10f);
         data.setValueTypeface(mTf);
         mChart.setData(data);
