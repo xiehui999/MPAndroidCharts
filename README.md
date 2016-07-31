@@ -17,4 +17,4 @@ MPAndroidChart是一款基于Android的开源图表库，MPAndroidChart不仅可
 
 
 #新增y数据显示x,y轴对应数据拼接
-![RadarChart](https://github.com/xiehui999/MPAndroidCharts/blob/master/image/barchart.png)
+![](https://github.com/xiehui999/MPAndroidCharts/blob/master/image/barchar.png)
